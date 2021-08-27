@@ -27,4 +27,12 @@ test_number = base_number::with_base(10, 123)
 $.print(test_number == 123)
 ```
 
+If you want to create a base_number with a non-10 base you can just do:
+```
+base_number::{
+  base: 2,
+  value: '010111010101'
+}
+```
+
 # All bases up to 16 are currently supported, but more can be added if the corresponding characters are also added. (see the first 2 lines of bases.spwn)

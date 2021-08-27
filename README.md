@@ -1,6 +1,7 @@
 # bases-spwn
+a library to convert numbers between any base. 
 
-bases-spwn is a library to convert numbers between any base. it includes a single type, `@base_number`, which you can use to hold your numbers in different bases.
+It includes a single type, `@base_number`, which you can use to hold your numbers in different bases.
 
 # Usage
 

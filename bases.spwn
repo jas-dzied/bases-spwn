@@ -41,8 +41,8 @@ impl @base_number {
         return current_output
     },
     _as_: (self, _type: @type_indicator) {
-        return switch _type {
-            @number: self.to_number()
+        if _type == @number {
+            return self.to_number()
         }
     }
 }

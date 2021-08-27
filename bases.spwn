@@ -81,14 +81,6 @@ impl @base_number {
             return self.to_number() <= other.to_number()
         }
     },
-    _less_: (self, other: @number | @base_number) {
-        if other.type == @number {
-            return self.to_number() < other
-        }
-        else {
-            return self.to_number() < other.to_number()
-        }
-    },
 }
 
 // mathematical operation methods
@@ -157,58 +149,58 @@ impl @base_number {
 impl @base_number {
     _add_: (self, other: @number | @base_number) {
         if other.type == @number {
-            self.value = @base_number::convert_number(self.base, self.value.to_number() + other)
+            self.value = @base_number::convert_number(self.base, self.to_number() + other)
         }
         else {
-            self.value = @base_number::convert_number(self.base, self.value.to_number() + other.to_number())
+            self.value = @base_number::convert_number(self.base, self.to_number() + other.to_number())
         }
     },
     _subtract_: (self, other: @number | @base_number) {
         if other.type == @number {
-            self.value = @base_number::convert_number(self.base, self.value.to_number() - other)
+            self.value = @base_number::convert_number(self.base, self.to_number() - other)
         }
         else {
-            self.value = @base_number::convert_number(self.base, self.value.to_number() - other.to_number())
+            self.value = @base_number::convert_number(self.base, self.to_number() - other.to_number())
         }
     },
     _multiply_: (self, other: @number | @base_number) {
         if other.type == @number {
-            self.value = @base_number::convert_number(self.base, self.value.to_number() * other)
+            self.value = @base_number::convert_number(self.base, self.to_number() * other)
         }
         else {
-            self.value = @base_number::convert_number(self.base, self.value.to_number() * other.to_number())
+            self.value = @base_number::convert_number(self.base, self.to_number() * other.to_number())
         }
     },
     _divide_: (self, other: @number | @base_number) {
         if other.type == @number {
-            self.value = @base_number::convert_number(self.base, self.value.to_number() / other)
+            self.value = @base_number::convert_number(self.base, self.to_number() / other)
         }
         else {
-            self.value = @base_number::convert_number(self.base, self.value.to_number() / other.to_number())
+            self.value = @base_number::convert_number(self.base, self.to_number() / other.to_number())
         }
     },
     _exponate_: (self, other: @number | @base_number) {
         if other.type == @number {
-            self.value = @base_number::convert_number(self.base, self.value.to_number() ^ other)
+            self.value = @base_number::convert_number(self.base, self.to_number() ^ other)
         }
         else {
-            self.value = @base_number::convert_number(self.base, self.value.to_number() ^ other.to_number())
+            self.value = @base_number::convert_number(self.base, self.to_number() ^ other.to_number())
         }
     },
     _modulate_: (self, other: @number | @base_number) {
         if other.type == @number {
-            self.value = @base_number::convert_number(self.base, self.value.to_number() % other)
+            self.value = @base_number::convert_number(self.base, self.to_number() % other)
         }
         else {
-            self.value = @base_number::convert_number(self.base, self.value.to_number() % other.to_number())
+            self.value = @base_number::convert_number(self.base, self.to_number() % other.to_number())
         }
     },
     _intdivided_by_: (self, other: @number | @base_number) {
         if other.type == @number {
-            self.value = @base_number::convert_number(self.base, self.value.to_number() /% other)
+            self.value = @base_number::convert_number(self.base, self.to_number() /% other)
         }
         else {
-            self.value = @base_number::convert_number(self.base, self.value.to_number() /% other.to_number())
+            self.value = @base_number::convert_number(self.base, self.to_number() /% other.to_number())
         }
     },
     example: (num: @number, base: @number) {
